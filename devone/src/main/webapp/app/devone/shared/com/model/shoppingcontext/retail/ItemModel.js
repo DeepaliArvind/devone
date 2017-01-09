@@ -1,0 +1,47 @@
+Ext.define('Devone.devone.shared.com.model.shoppingcontext.retail.ItemModel', {
+     "extend": "Ext.data.Model",
+     "fields": [{
+          "name": "primaryKey",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "itemId",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "productid",
+          "reference": "Product",
+          "defaultValue": ""
+     }, {
+          "name": "productProductName",
+          "type": "auto",
+          "defaultValue": ""
+     }, {
+          "name": "itemName",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "img",
+          "type": "string",
+          "defaultValue": ""
+     }, {
+          "name": "stock",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "price",
+          "type": "number",
+          "defaultValue": ""
+     }, {
+          "name": "versionId",
+          "type": "int",
+          "defaultValue": ""
+     }, {
+          "name": "entityAudit",
+          "reference": "EntityAudit"
+     }, {
+          "name": "primaryDisplay",
+          "type": "string",
+          "defaultValue": ""
+     }]
+});

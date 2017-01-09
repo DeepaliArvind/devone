@@ -1,0 +1,263 @@
+Ext.define('Devone.devone.web.com.view.shoppingcontext.retail.OrderProcessingScreen', {
+     "xtype": "orderProcessingScreenView",
+     "items": [{
+          "xtype": "panel",
+          "items": [{
+               "xtype": "panel",
+               "items": [{
+                    "xtype": "textfield",
+                    "fieldLabel": "creditCardNo",
+                    "margin": 5,
+                    "bindable": "creditCardNo",
+                    "name": "creditCardNo",
+                    "text": "creditCardNo",
+                    "fieldName": "creditCardNo",
+                    "displayName": "creditCardNo",
+                    "fieldType": "java.lang.String",
+                    "widget": "textfield",
+                    "isField": true,
+                    "itemId": "creditCardNo_textfield"
+               }, {
+                    "xtype": "numberfield",
+                    "fieldLabel": "amount",
+                    "name": "amount",
+                    "margin": 5,
+                    "bindable": "amount",
+                    "text": "amount",
+                    "fieldName": "amount",
+                    "displayName": "amount",
+                    "fieldType": "java.lang.Double",
+                    "widget": "numberfield",
+                    "isField": true,
+                    "itemId": "amount_numberfield"
+               }, {
+                    "xtype": "textfield",
+                    "fieldLabel": "ccHolderName",
+                    "margin": 5,
+                    "bindable": "ccHolderName",
+                    "name": "ccHolderName",
+                    "text": "ccHolderName",
+                    "fieldName": "ccHolderName",
+                    "displayName": "ccHolderName",
+                    "fieldType": "java.lang.String",
+                    "widget": "textfield",
+                    "isField": true,
+                    "itemId": "ccHolderName_textfield"
+               }, {
+                    "xtype": "textfield",
+                    "fieldLabel": "cvvNo",
+                    "margin": 5,
+                    "bindable": "cvvNo",
+                    "name": "cvvNo",
+                    "text": "cvvNo",
+                    "fieldName": "cvvNo",
+                    "displayName": "cvvNo",
+                    "fieldType": "java.lang.String",
+                    "widget": "textfield",
+                    "isField": true,
+                    "itemId": "cvvNo_textfield"
+               }],
+               "layout": {
+                    "type": "vbox"
+               },
+               "border": true,
+               "autoScroll": true,
+               "margin": 5,
+               "itemId": "panel_ext_9947",
+               "flex": 1,
+               "dockedItems": []
+          }, {
+               "xtype": "panel",
+               "items": [{
+                    "xtype": "numberfield",
+                    "fieldLabel": "expiryYear",
+                    "name": "expiryYear",
+                    "margin": 5,
+                    "bindable": "expiryYear",
+                    "text": "expiryYear",
+                    "fieldName": "expiryYear",
+                    "displayName": "expiryYear",
+                    "fieldType": "java.lang.Integer",
+                    "widget": "numberfield",
+                    "isField": true,
+                    "itemId": "expiryYear_numberfield"
+               }, {
+                    "xtype": "textfield",
+                    "fieldLabel": "customerId",
+                    "margin": 5,
+                    "bindable": "customerId",
+                    "name": "customerId",
+                    "text": "customerId",
+                    "fieldName": "customerId",
+                    "displayName": "customerId",
+                    "fieldType": "java.lang.String",
+                    "widget": "textfield",
+                    "isField": true,
+                    "itemId": "customerId_textfield",
+                    "hidden": true
+               }, {
+                    "xtype": "numberfield",
+                    "fieldLabel": "expiryMonth",
+                    "name": "expiryMonth",
+                    "margin": 5,
+                    "bindable": "expiryMonth",
+                    "text": "expiryMonth",
+                    "fieldName": "expiryMonth",
+                    "displayName": "expiryMonth",
+                    "fieldType": "java.lang.Integer",
+                    "widget": "numberfield",
+                    "isField": true,
+                    "itemId": "expiryMonth_numberfield"
+               }],
+               "layout": {
+                    "type": "vbox"
+               },
+               "border": true,
+               "autoScroll": true,
+               "margin": 5,
+               "itemId": "panel_ext_9988",
+               "flex": 1,
+               "dockedItems": []
+          }],
+          "layout": {
+               "type": "hbox"
+          },
+          "autoScroll": true,
+          "border": true,
+          "margin": 5,
+          "itemId": "panel_ext_9923",
+          "columnWidth": "1",
+          "flex": 1,
+          "dockedItems": []
+     }, {
+          "xtype": "grids",
+          "name": "CartItems",
+          "title": "Cart Items",
+          "pageSize": 30,
+          "autoScroll": true,
+          "hiddenName": "Grid",
+          "margin": 5,
+          "collapseMode": "header",
+          "border": true,
+          "editTools": false,
+          "features": [],
+          "plugins": [{
+               "ptype": "cellediting",
+               "clicksToEdit": 1
+          }],
+          "columns": [{
+               "xtype": "gridcolumn",
+               "header": "Qyantity",
+               "name": "qty",
+               "dataIndex": "qty",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "SubTotal",
+               "name": "subTotal",
+               "dataIndex": "subTotal",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "itemId",
+               "name": "itemId",
+               "hidden": true,
+               "dataIndex": "itemId",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "Item Name",
+               "name": "itemName",
+               "dataIndex": "itemName",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "Image",
+               "name": "img",
+               "hidden": true,
+               "dataIndex": "img",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "Stock",
+               "name": "stock",
+               "hidden": true,
+               "dataIndex": "stock",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "Price",
+               "name": "price",
+               "dataIndex": "price",
+               "flex": 1
+          }, {
+               "xtype": "gridcolumn",
+               "header": "ProductIdDesc",
+               "name": "productIdDesc",
+               "hidden": true,
+               "dataIndex": "productIdDesc",
+               "flex": 1
+          }],
+          "itemId": "CartItems_gridpanel",
+          "columnWidth": "1",
+          "flex": 1,
+          "customStore": {
+               "model": "Devone.devone.shared.com.model.shoppingcontext.FetchCartTotalRMModel",
+               "autoLoad": true,
+               "autoSync": true,
+               "proxy": {
+                    "type": "ajax",
+                    "url": "secure/GetCartItemsWS/getCartItems",
+                    "actionMethods": {
+                         "read": "POST"
+                    },
+                    "headers": {
+                         "Content-Type": "application/json"
+                    },
+                    "extraParams": {},
+                    "reader": {
+                         "type": "json",
+                         "rootProperty": "response.data"
+                    }
+               }
+          }
+     }, {
+          "xtype": "button",
+          "name": "paymentProcessing",
+          "text": "Payment Processing",
+          "margin": 5,
+          "scale": "medium",
+          "itemId": "paymentProcessing_button",
+          "columnWidth": "1",
+          "flex": 1,
+          "listeners": {
+               "click": "onPaymentProcessingClick"
+          }
+     }, {
+          "xtype": "displayfield",
+          "fieldLabel": "Order Total",
+          "margin": 5,
+          "bindable": "OrderTotal",
+          "style": "word-break: break-word; word-wrap: break-word;",
+          "name": "OrderTotal",
+          "itemId": "OrderTotal_displayfield",
+          "columnWidth": "0.30",
+          "flex": 1
+     }],
+     "layout": {
+          "type": "column"
+     },
+     "border": true,
+     "autoScroll": true,
+     "margin": 5,
+     "itemId": "form_ext_9882",
+     "dockedItems": [],
+     "requires": ["Devone.devone.shared.com.model.shoppingcontext.FetchCartTotalRMModel", "Devone.devone.web.com.controller.shoppingcontext.retail.OrderProcessingScreenController", "Devone.devone.shared.com.viewmodel.shoppingcontext.retail.OrderProcessingScreenViewModel", "Devone.devone.shared.com.model.shoppingcontext.retail.OrderProcessingScreenModel", "Devone.view.fw.component.Grids"],
+     "extend": "Ext.form.Panel",
+     "listeners": {
+          "afterrender": "onFormExt9882Afterrender",
+          "scope": "controller"
+     },
+     "viewModel": "OrderProcessingScreenViewModel",
+     "controller": "OrderProcessingScreenController"
+});
